@@ -47,5 +47,123 @@
 </table>
 </body>
 </html>
+<!--Another model Tic Tac Toe Board-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TicTacToeBoard</title>
+	<link rel="stylesheet" type="text/css" href="tttboard.css">
+</head>
+<body>
+
+<h1>Tic-Tac-Toe</h1>
+<div id="grid">
+	<h3>Using classes</h3>
+	<table id="tbl1">
+		<tr>
+			<td>1</td>
+			<td class="vertical">2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td class="horizontal">4</td>
+			<td class="vertical horizontal">5</td>
+			<td class="horizontal">6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td class="vertical">8</td>
+			<td>9</td>
+		</tr>
+	</table>
+
+	<br>
+
+	<h3>Using nth-of-type()</h3>
+	<table id="tbl2">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+
+	<br>
+
+	<h3>Using all bordered with a hidded outside border</h3>
+	<p>Coutesy of <a href="https://www.udemy.com/user/jeffray-tipontipon/">Jeffray Tipontipon</a></p>
+	<table id="tbl3">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
+<!--for html file here below css file-->
 
 
+body {
+	text-align: center;
+	font-family: roboto;
+}
+table {
+	margin: auto;
+	border-collapse: collapse;
+}
+td {
+	height: 80px;
+	width: 100px;
+}
+
+/********** Table 1 Grid **********/
+#tbl1 .horizontal {
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+}
+#tbl1 .vertical {
+	border-left: 2px solid grey;
+	border-right: 2px solid grey;
+}
+
+/********** Table 2 Grid **********/
+/* I used 2 and even here to show the difference */
+#tbl2 tr:nth-of-type(2) td { /* only effects the 2nd element */
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+}
+#tbl2 tr td:nth-of-type(even) { /* effects every even/2nd element */
+	border-left: 2px solid grey;
+	border-right: 2px solid grey;
+}
+
+/********** Table 3 Grid **********/
+#tbl3 td {
+	border: 2px solid grey;
+}
+#tbl3 {
+	border: hidden;
+	border-collapse: collapse;
+}
